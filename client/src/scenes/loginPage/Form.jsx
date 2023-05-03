@@ -55,7 +55,7 @@ const Form = () => {
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
-  const register = async (values, onSubmitPros) => {
+  const register = async (values, onSubmitProps) => {
     // this allows us to send form info with image, no need to do this normal
     const formData = new FormData();
     for (let value in values) {
@@ -71,14 +71,14 @@ const Form = () => {
       }
     );
     const savedUser = await savedUserResponse.json();
-    onSubmitPros.resetForm();
+    onSubmitProps.resetForm();
 
     if (savedUser) {
       setPageType("login");
     }
   };
 
-  const login = async (values, onSubmitPros) => {
+  const login = async (values, onSubmitProps) => {
     const loggedInResponse = await fetch(
       `${process.env.REACT_APP_BASE_URL}/auth/login`,
       {
@@ -88,7 +88,7 @@ const Form = () => {
       }
     );
     const loggedIn = await loggedInResponse.json();
-    onSubmitPros.resetForm();
+    onSubmitProps.resetForm();
     if (loggedIn) {
       dispatch(
         setLogin({

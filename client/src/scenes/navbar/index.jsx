@@ -40,7 +40,7 @@ const Navbar = () => {
   const alt = theme.palette.background.alt;
 
   const fullName = `${user.firstName} ${user.lastName}`;
-  
+
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
       <FlexBetween gap="1.75rem">
@@ -140,7 +140,7 @@ const Navbar = () => {
             flexDirection="column"
             // flexDirection={"column"} this syntax also worked
             justifyContent="center"
-            alignContent="center"
+            alignItems="center"
             gap="3rem">
             <IconButton
               onClick={() => dispatch(setMode())}

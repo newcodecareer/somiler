@@ -131,36 +131,24 @@ const MyPostWidget = ({ picturePath }) => {
 
         {isNonMobileScreens ? (
           <>
-            <FlexBetween gap="0.25rem" onClick={() => setImage(!isImage)}>
+            <FlexBetween gap="0.25rem">
               <GifBoxOutlined sx={{ color: mediumMain }} />
-              <Typography
-                color={mediumMain}
-                sx={{ "&:hover": { cursor: "pointer", color: medium } }}>
-                Clip
-              </Typography>
+              <Typography color={mediumMain}>Clip</Typography>
             </FlexBetween>
 
-            <FlexBetween gap="0.25rem" onClick={() => setImage(!isImage)}>
+            <FlexBetween gap="0.25rem">
               <AttachFileOutlined sx={{ color: mediumMain }} />
-              <Typography
-                color={mediumMain}
-                sx={{ "&:hover": { cursor: "pointer", color: medium } }}>
-                Attachment
-              </Typography>
+              <Typography color={mediumMain}>Attachment</Typography>
             </FlexBetween>
 
-            <FlexBetween gap="0.25rem" onClick={() => setImage(!isImage)}>
+            <FlexBetween gap="0.25rem">
               <MicOutlined sx={{ color: mediumMain }} />
-              <Typography
-                color={mediumMain}
-                sx={{ "&:hover": { cursor: "pointer", color: medium } }}>
-                Audio
-              </Typography>
+              <Typography color={mediumMain}>Audio</Typography>
             </FlexBetween>
           </>
         ) : (
           <FlexBetween gap="0.25rem">
-            <MoreHorizOutlined sx={{ color: medium }} />
+            <MoreHorizOutlined sx={{ color: mediumMain }} />
           </FlexBetween>
         )}
 
